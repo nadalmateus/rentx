@@ -1,1 +1,3 @@
-# rentalX-API
+# RentACar-API
+
+<img src="diagrama.png">
