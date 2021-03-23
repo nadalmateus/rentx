@@ -1,4 +1,9 @@
-# Desafio 1 do Ignite Trilha NodeJS
+<p align="center">
+  <a>RentX - The simplest way to rent a car!</a>
+</p>
+
+
+---
 
 <img alt="RentX" src="./github/logoRentX.png"/>
 
@@ -26,7 +31,7 @@ This is a fictional car rental company that offers car rental services. The mobi
 
 Basically this is for renting a car. *(You can use the structure to rent anything !!!)*
 
- Below are described the features that you must add to application to meet all requirements.
+Below are described the features that you must add to application to meet all requirements. *(This features can change any time!!!)*
 
 ---
 
