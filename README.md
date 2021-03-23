@@ -157,5 +157,8 @@ http://localhost:3333/api-docs/
 This project is under the MIT license.
 
 ---
+<p align="center">
 
-**Made with ❤ by <a href="https://www.linkedin.com/in/nadalmateus/">Matt</a> !**
+<h3>Made with ❤ by <a href="https://www.linkedin.com/in/nadalmateus/">Matt</a> !</h3>
+
+</p>
