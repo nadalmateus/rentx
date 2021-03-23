@@ -1,6 +1,6 @@
 # Desafio 1 do Ignite Trilha NodeJS
 
-<img alt="RentX" src="./github/logo.png"/>
+<img alt="RentX" src="./github/logoRentX.png"/>
 
 -----
 
