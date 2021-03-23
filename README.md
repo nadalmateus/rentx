@@ -1,6 +1,8 @@
 # Desafio 1 do Ignite Trilha NodeJS
 
-<img alt="RentX" src="./github/logo.png" height="20" width="300" align="ceter"/>
+<img alt="RentX" src="./github/logo.png"/>
+
+-----
 
 <h3 align="center">
 RentX - The simplest way to rent a car!
