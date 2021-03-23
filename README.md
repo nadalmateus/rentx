@@ -1,7 +1,3 @@
-<p align="center">
-  <a>RentX - The simplest way to rent a car!</a>
-</p>
-
 
 ---
 
