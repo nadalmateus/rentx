@@ -160,6 +160,6 @@ This project is under the MIT license.
 
 <p align="center">
 
-  <a> Made with ❤ by <a href="https://www.linkedin.com/in/nadalmateus/">Matt</a>
-  
+  <a> Made with ❤ by <a href="https://www.linkedin.com/in/nadalmateus/">Matt</a> and a little help from <a href="https://github.com/Rocketseat"> Rocketseat
+
 </p>
