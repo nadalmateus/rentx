@@ -56,7 +56,7 @@ The fields that users must have are:
 
 ### 2. **Vehicle registration**
 
-You must allow vehicles to be kept (registered / updated) in the application, these will be ** authenticated routes ** where only authenticated users, who ** are admins, ** can access it. To do this, you must create a `cars` table that will have the following ** fields: **
+You must allow vehicles to be kept (registered / updated) in the application, these will be **authenticated routes**  where only authenticated users, who **are admins,** can access it. To do this, you must create a `cars` table that will have the following **fields:**
 
 - id (car id);
 - name (name of the car);
@@ -69,11 +69,11 @@ For this management, you can create routes for listing / registering / updating 
 
 ### 3. **Specification record**
 
-In order to register cars, it is suggested that you create a separate table that will contain the specifications shared between two or more cars. This table will have a relationship * many to one * with the table `` cars` * where the same specification can be in more than one vehicle.
+In order to register cars, it is suggested that you create a separate table that will contain the specifications shared between two or more cars. This table will have a relationship * many to one *with the table `cars`* where the same specification can be in more than one vehicle.
 
 Still on the specifications table, it is interesting that you store ** only ** mandatory fields such as the type of fuel and exchange. The other information (including, you do not need to stick only to the six elements that are in the layout) should be directly in the table `cars` because they are information directly linked to the vehicle. If you think of a new field that can be shared between two or more cars, it is interesting to include that table as well.
 
-The specifications table will have the following ** fields: **
+The specifications table will have the following fields:
 
 - spec_id (specification id);
 - car_id (car id that will have the reference of that spec.);
@@ -160,6 +160,6 @@ This project is under the MIT license.
 
 <p align="center">
 
-  <a> Made with ❤ by <a href="https://www.linkedin.com/in/nadalmateus/">Matt</a> and a little help from <a href="https://github.com/Rocketseat"> Rocketseat
+  <a> Made with ❤ by <a href="https://www.linkedin.com/in/nadalmateus/">Matt</a>, and a little help from <a href="https://github.com/Rocketseat"> Rocketseat
 
 </p>
