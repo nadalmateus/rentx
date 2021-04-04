@@ -69,9 +69,9 @@ For this management, you can create routes for listing / registering / updating 
 
 ### 3. **Specification record**
 
-In order to register cars, it is suggested that you create a separate table that will contain the specifications shared between two or more cars. This table will have a relationship * many to one *with the table `cars`* where the same specification can be in more than one vehicle.
+In order to register cars, it is suggested that you create a separate table that will contain the specifications shared between two or more cars. This table will have a relationship *many to one *with the table `cars`* where the same specification can be in more than one vehicle.
 
-Still on the specifications table, it is interesting that you store ** only ** mandatory fields such as the type of fuel and exchange. The other information (including, you do not need to stick only to the six elements that are in the layout) should be directly in the table `cars` because they are information directly linked to the vehicle. If you think of a new field that can be shared between two or more cars, it is interesting to include that table as well.
+Still on the specifications table, it is interesting that you store **only** mandatory fields such as the type of fuel and exchange. The other information (including, you do not need to stick only to the six elements that are in the layout) should be directly in the table `cars` because they are information directly linked to the vehicle. If you think of a new field that can be shared between two or more cars, it is interesting to include that table as well.
 
 The specifications table will have the following fields:
 
