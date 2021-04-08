@@ -20,8 +20,7 @@ export class CreateCategories1617714026220 implements MigrationInterface {
                         type: "varchar",
                     },
                     {
-                        // eslint-disable-next-line prettier/prettier
-                        name: 'created_at',
+                        name: "created_at",
                         type: "timestamp",
                         default: "now()",
                     },
