@@ -12,4 +12,4 @@ class CreateCourseService {
 }
 
 
-export default new CreateCourseService
+export default new CreateCourseService;
