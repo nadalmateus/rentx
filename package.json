@@ -7,13 +7,15 @@
   "license": "MIT",
   "scripts": {
     "commit": "cz",
-    "dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+    "dev": "ts-node-dev --inspect --transpile-only --respawn --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "commitizen": "^4.2.3",
