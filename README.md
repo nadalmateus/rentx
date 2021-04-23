@@ -123,8 +123,6 @@ yarn test
 
 👤 **Mateus Nadal <nadalmateus@outlook.com>**
 
-* Website: https://www.linkedin.com/in/nadalmateus
-* Twitter: [@nadalmateus](https://twitter.com/nadalmateus)
 * Github: [@nadalmateus](https://github.com/nadalmateus)
 * LinkedIn: [@nadalmateus](https://linkedin.com/in/nadalmateus)
 
