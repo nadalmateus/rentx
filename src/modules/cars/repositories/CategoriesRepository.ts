@@ -19,7 +19,7 @@ class CategoriesRepository implements ICategoriesRepository {
     }
 
     return CategoriesRepository.INSTANCE
-  }
+  };
 
   create ({ name, description }: ICreateCategoryDTO): void {
     const category = new Category()
