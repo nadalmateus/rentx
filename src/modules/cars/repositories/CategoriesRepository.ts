@@ -29,7 +29,6 @@ class CategoriesRepository implements ICategoriesRepository {
       description,
       created_at: new Date()
     })
-
     this.categories.push(category)
   }
 
