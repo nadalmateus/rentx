@@ -1,4 +1,4 @@
-import { Category } from "../model/Category";
+import { Category } from '../model/Category'
 
 interface ICreateCategoryDTO {
   name: string;
@@ -11,4 +11,4 @@ interface ICategoriesRepository {
   create({ name, description }: ICreateCategoryDTO): void;
 }
 
-export { ICategoriesRepository, ICreateCategoryDTO };
+export { ICategoriesRepository, ICreateCategoryDTO }
