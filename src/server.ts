@@ -1,11 +1,12 @@
+import compression from 'compression'
 import express from 'express'
 import helmet from 'helmet'
-
 import { categoriesRoutes } from './routes/categories.routes'
 import { specificationRoutes } from './routes/specifications.routes'
 
 const app = express()
 app.use(helmet())
+app.use(compression())
 
 app.use(express.json())
 
