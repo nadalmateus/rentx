@@ -1,134 +1,99 @@
-<h1 align="center">Welcome to rentx 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="See docs" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-  <a href="https://twitter.com/nadalmateus" target="_blank">
-    <img alt="Twitter: nadalmateus" src="https://img.shields.io/twitter/follow/nadalmateus.svg?style=social" />
-  </a>
-</p>
+# Car registration
 
-> An application for a car rental company! The simplest way to rent a car!
-
-### 🏠 [Homepage](https://github.com/nadalmateus/rentx)
-
-### ✨ [Demo](https://github.com/nadalmateus/rentx)
-
-## The App
-
-### **Functionalities**
-
-Below are described the features that you must add to your application to meet all requirements.
-
-### **1. Authentication**
-
-Allow the creation of users and the authentication of created users. These users will be both the application administrators and the deliverers.
-
-For this, you can create a `users` table, where all users saved in that table will be used in the authenticated routes that you access.
-
-Admin users must have a field in the `admin` data table that will be` true`.
-
-- Authentication can be done using JWT.
-
-** Tip: ** Perform the validation of the input data;
-
-The fields that users must have are:
-
-- id (user id);
-- name (user name);
-- image (user profile image);
-- email (user email);
-- password (user password);
-- admin (Boolean to define whether the user is an administrator or not);
-- created_at;
-- updated_at;
-
-### 2. ** Vehicle registration **
-
-You must allow vehicles to be kept (registered / updated) in the application, these will be ** authenticated ** routes where only authenticated users, who ** are admins, ** can access it. To do this, you must create a `cars` table that will have the following ** fields: **
-
-- id (car id);
-- name (name of the car);
-- brand (car brand);
-- daily_value (daily rate);
-- created_at;
-- updated_at;
-
-For this management, you can create routes for listing / registering / updating / removing cars;
-
-### 3. ** Specification record **
-
-In order to register cars, it is suggested that you create a separate table that will contain the specifications shared between two or more cars. This table will have a relationship * many to one * with the table `` cars` * where the same specification can be in more than one vehicle.
-
-Still on the specifications table, it is interesting that you store ** only ** mandatory fields such as the type of fuel and exchange. The other information (including, you do not need to stick only to the six elements that are in the layout) should be directly in the table `cars` because they are information directly linked to the vehicle. If you think of a new field that can be shared between two or more cars, it is interesting to include that table as well.
-
-The specifications table will have the following ** fields: **
-
-- spec_id (specification id);
-- car_id (car id that will have the reference of that spec);
-- name (name of the specification);
-- description (description of the spec);
-- icon (name of the icon to be used to display the specification card);
-- created_at;
-- updated_at.
-
-### 4. ** Car rental **
-
-You must allow rentals made and saved in your application database. To do this, you must create a `rentals` table that will have the following ** fields: **
-
-- car_id (rental car id)
-- client_id (user id responsible for renting)
-- start_date (initial rental date);
-- end_date (final rental date);
-- created_at;
-- updated_at;
-
-### 5. ** Vehicle listing **
-
-For this functionality, you must allow the listing of vehicles according to their availability, so that when listing cars, you must enter the start date and the end date, and show only the cars that will be available in the range of that date.
-
-In addition, you should have some filters in the listing, such as a name filter (vehicle name), value (value range), fuel filter (Gasoline, Electric, Alcohol) and a transmission filter (automatic and manual).
-
-## **Delivery**
-
-This project ** does not need to be delivered ** and will not receive correction. After completing the project, adding this code to your Github and / or creating a publication on linkedin telling about your experience is a good way to demonstrate your knowledge for future opportunities.
+**Functional Requirement**
+- It must be possible to register a new car.
 
 
+**Non-functional requirement**
+- It should not be possible to register a car with an existing license plate.
+- The car must be registered, by default, with availability.
+- The user responsible for the registration must be an administrator user.
+
+# List of cars
+
+**Functional Requirement**
+- It should be possible to list all available cars
+- It should be possible to list all available cars by - category name
+- It should be possible to list all available cars by - brand name
+- It should be possible to list all available cars by - car name
+
+**Non-functional requirement**
+- The user does not need to be logged in to the system.
 
 
-## Install
+# Specification registration on the car
+
+**Functional Requirement**
+- It must be possible to register a specification for a car
 
 
-```sh
-Clone this repo, and run yarn!
-```
+**Non-functional requirement**
+- It should not be possible to register a specification for an unregistered car.
+- It should not be possible to register an existing specification for the same car.
+- The user responsible for the registration must be an administrator user.
 
-## Usage
 
-```sh
-To run this project, run yarn dev!
-```
+# Registration of car images
 
-## Run tests
+**Functional Requirement**
+- It must be possible to register the car image
 
-```sh
-yarn test
-```
+**RNF**
+- Use the multer to upload the files
 
-## Author
+**Non-functional requirement**
+- The user must be able to register more than one image for the - same car
+- The user responsible for the registration must be an administrator user.
 
-👤 **Mateus Nadal <nadalmateus@outlook.com>**
 
-* Github: [@nadalmateus](https://github.com/nadalmateus)
-* LinkedIn: [@nadalmateus](https://linkedin.com/in/nadalmateus)
+# Car rental
 
-## Show your support
+**Functional Requirement**
+- It must be possible to register a rental
 
-Give a ⭐️ if this project helped you!
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+**Non-functional requirement**
+- The rental must have a minimum duration of 24 hours.
+- It should not be possible to register a new rental if already - there is an open one for the same user
+- It should not be possible to register a new rental if already - there is an open one for the same car
+- The user must be logged in to the application
+- When making a rental, the car's status must be - changed to unavailable
+
+
+# Car return
+
+**Functional Requirement**
+- It must be possible to return a car
+
+**Non-functional requirement**
+- If the car is returned with less than 24 hours, it must - be charged full daily.
+- When making the return, the car must be released for - another rental.
+- When making the return, the user must be released - for another rental.
+- When making the return, the total rent must be calculated.
+- If the return time is longer than the expected delivery time, a fine will be charged - proportional to the days of delay.
+- If there is a fine, it must be added to the total rent.
+- The user must be logged in to the application
+
+
+# Rental List for User
+
+**Functional Requirement**
+- It must be possible to search for all rentals for the user
+
+**Non-functional requirement**
+- The user must be logged in to the application
+
+
+# Recover Password
+
+**Functional Requirement**
+- It must be possible for the user to recover the password by informing the email
+- The user should receive an email with the step-by-step password recovery
+- The user must be able to enter a new password
+
+**Non-functional requirement**
+- The user needs to enter a new password
+- The link sent for recovery must expire in 3 hours
+
+# Diagram
+<img src=".github/diagram.png">
