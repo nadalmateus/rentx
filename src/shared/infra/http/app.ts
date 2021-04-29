@@ -1,23 +1,24 @@
-import 'reflect-metadata'
-import 'dotenv/config'
-import cors from 'cors'
-import express, { NextFunction, Request, Response } from 'express'
-import 'express-async-errors'
-import swaggerUi from 'swagger-ui-express'
+import upload from '@config/upload'
 import * as Sentry from '@sentry/node'
 import * as Tracing from '@sentry/tracing'
-
 import '@shared/container'
-import upload from '@config/upload'
 import { AppError } from '@shared/errors/AppError'
 import rateLimiter from '@shared/infra/http/middlewares/rateLimiter'
 import createConnection from '@shared/infra/typeorm'
-
+import cors from 'cors'
+import 'dotenv/config'
+import express, { NextFunction, Request, Response } from 'express'
+import 'express-async-errors'
+import 'reflect-metadata'
+import swaggerUi from 'swagger-ui-express'
 import swaggerFile from '../../../swagger.json'
 import { router } from './routes'
+import helmet from 'helmet'
 
 createConnection()
 const app = express()
+
+app.use(helmet())
 
 app.use(rateLimiter)
 
