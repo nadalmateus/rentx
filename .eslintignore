@@ -1,3 +1,7 @@
-/*.js
+**/*.js
+**/*.json
+**/*.js
+**/*.hbs
+
+
 node_modules
-dist
