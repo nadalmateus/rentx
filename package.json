@@ -1,12 +1,15 @@
 {
-  "name": "RentX",
   "version": "1.0.0",
-  "main": "source/server/server.ts",
+  "main": "source/server/startup.ts",
   "repository": "https://github.com/nadalmateus/RentX.git",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --clear --respawn --transpile-only source/server/server.ts",
+    "dev": "ts-node-dev --clear --respawn --transpile-only source/server/startup.ts",
     "lint": "eslint \"source/**/*\" --fix"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.3.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
@@ -21,9 +24,5 @@
     "prisma": "^3.3.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.4"
-  },
-  "dependencies": {
-    "@prisma/client": "^3.3.0",
-    "express": "^4.17.1"
   }
 }

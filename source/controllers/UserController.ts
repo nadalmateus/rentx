@@ -1,0 +1,5 @@
+class UserController {
+
+}
+
+export { UserController }
