@@ -6,3 +6,12 @@ datasource db {
   provider = "sqlite"
   url      = "file:./dev.db"
 }
+
+model user {
+  userId   String @id @default(uuid())
+  username String
+  email String @unique
+  password String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
