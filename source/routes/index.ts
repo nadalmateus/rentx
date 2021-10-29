@@ -6,14 +6,14 @@ const prisma = new PrismaClient()
 
 routes.post('/', async (request: Request, response: Response) => {
   const { username, email, password } = request.body
-  const user = await prisma.user.create({
+  const CreatedUser = await prisma.user.create({
     data: {
       username: username,
       email: email,
       password: password
     }
   })
-  return response.json(user)
+  return response.json(CreatedUser)
 })
 
 export { routes }

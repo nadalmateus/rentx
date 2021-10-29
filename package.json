@@ -5,7 +5,7 @@
   "repository": "https://github.com/nadalmateus/RentX.git",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev source/server/server.ts",
+    "dev": "ts-node-dev --clear --respawn --transpile-only source/server/server.ts",
     "lint": "eslint \"source/**/*\" --fix"
   },
   "devDependencies": {

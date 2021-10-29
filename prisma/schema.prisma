@@ -7,11 +7,18 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-model user {
+model User {
   userId   String @id @default(uuid())
   username String
   email String @unique
   password String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  vaults Vault[]
+}
+
+model Vault {
+  vaultId String @id @default(uuid())
+  owner User @relation(fields: [ownerId], references: [userId])
+  ownerId String @default(uuid())
 }
