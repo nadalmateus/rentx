@@ -1,4 +1,4 @@
-import { CategoriesRepositories } from '../repositories/categories.repository'
+import { ICategoriesRepositories } from '../repositories/icategories.repository'
 
 interface IRequest {
     name: string;
@@ -7,7 +7,7 @@ interface IRequest {
 
 class CreateCategoryService {
   // eslint-disable-next-line no-useless-constructor
-  constructor (private categoriesRepository: CategoriesRepositories) { }
+  constructor (private categoriesRepository: ICategoriesRepositories) { }
 
   async execute ({ name, description }: IRequest) {
     const categoryAlreadyExists = await this.categoriesRepository.findByName(name)

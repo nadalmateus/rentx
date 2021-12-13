@@ -1,13 +1,9 @@
 import { Category } from '.prisma/client'
 import { randomUUID } from 'crypto'
 import { clientPrisma } from '../configurations/prisma'
+import { ICategoriesRepositories, ICreateCategoryDTO } from './icategories.repository'
 
-interface ICreateCategoryDTO {
-    name: string;
-    description: string
-}
-
-class CategoriesRepositories {
+class CategoriesRepositories implements ICategoriesRepositories {
   async create ({ name, description }: ICreateCategoryDTO): Promise<ICreateCategoryDTO> {
     const createCategory = await clientPrisma.category.create({
       data: {
