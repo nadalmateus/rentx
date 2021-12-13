@@ -1,21 +1,16 @@
-import { randomUUID } from 'crypto'
 import { Router } from 'express'
-import { clientPrisma } from '../services/prisma'
+import { CategoriesRepositories } from '../repositories/categories.repository'
 
 const categoriesRoutes = Router()
+
+const categoriesRepository = new CategoriesRepositories()
 
 categoriesRoutes.post('/', async (request, response) => {
   const { name, description } = request.body
 
-  const createCategory = await clientPrisma.category.create({
-    data: {
-      id: randomUUID(),
-      name,
-      description,
-      createdAt: new Date()
-    }
-  })
-  return response.status(201).json(createCategory)
+  categoriesRepository.create({ name, description })
+
+  return response.status(201).send()
 })
 
 export { categoriesRoutes }
