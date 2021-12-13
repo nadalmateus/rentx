@@ -10,10 +10,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Category {
   id          String   @id @unique @default(uuid())
   name        String
-  email       String   @unique
-  password    String
-  createdDate DateTime @default(now())
+  description String
+  createdAt   DateTime
 }
