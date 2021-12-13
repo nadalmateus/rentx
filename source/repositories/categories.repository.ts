@@ -1,3 +1,4 @@
+import { Category } from '@prisma/client'
 import { randomUUID } from 'crypto'
 import { clientPrisma } from '../services/prisma'
 
@@ -17,6 +18,11 @@ class CategoriesRepositories {
       }
     })
     return createCategory
+  }
+
+  async list (): Promise<Category[]> {
+    const listAllCategories = await clientPrisma.category.findMany()
+    return listAllCategories
   }
 }
 
