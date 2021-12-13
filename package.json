@@ -5,7 +5,8 @@
     "main": "source/bin/server.ts",
     "scripts": {
         "dev": "ts-node-dev --respawn --ignore-watch node_modules --respawn --exit-child source/bin/server.ts",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint \"source/**/*\" --fix"
     },
     "repository": {
         "type": "git",
@@ -35,6 +36,7 @@
     },
     "dependencies": {
         "@prisma/client": "^3.6.0",
+        "dotenv": "^10.0.0",
         "express": "^4.17.1",
         "helmet": "^4.6.0"
     }
