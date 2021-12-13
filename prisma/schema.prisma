@@ -16,3 +16,10 @@ model Category {
   description String
   createdAt   DateTime
 }
+
+model Specification {
+  id          String   @id @unique @default(uuid())
+  name        String
+  description String
+  createdAt   DateTime
+}

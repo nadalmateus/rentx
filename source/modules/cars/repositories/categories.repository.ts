@@ -1,6 +1,6 @@
 import { Category } from '.prisma/client'
 import { randomUUID } from 'crypto'
-import { clientPrisma } from '../configurations/prisma'
+import { clientPrisma } from '../../../configurations/prisma'
 import { ICategoriesRepositories, ICreateCategoryDTO } from './icategories.repository'
 
 class CategoriesRepositories implements ICategoriesRepositories {
