@@ -9,5 +9,5 @@ server.use(helmet())
 server.use(express.json())
 server.use(routes)
 
-const port = process.env.SERVER_PORT
+const port = 3333
 server.listen(port, () => { console.log(`SERVER RUNNING ON http://localhost:${port}/`) })

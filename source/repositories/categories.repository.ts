@@ -1,6 +1,6 @@
-import { Category } from '@prisma/client'
+import { Category } from '.prisma/client'
 import { randomUUID } from 'crypto'
-import { clientPrisma } from '../services/prisma'
+import { clientPrisma } from '../configurations/prisma'
 
 interface ICreateCategoryDTO {
     name: string;
