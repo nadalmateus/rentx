@@ -8,10 +8,17 @@ const categoriesRepository = new CategoriesRepositories()
 categoriesRoutes.post('/', async (request, response) => {
   const { name, description } = request.body
 
-  categoriesRepository.create({ name, description })
+  const categoryAlreadyExists = await categoriesRepository.findByName(name)
+
+  if (categoryAlreadyExists) {
+    return response.status(400).json({ error: 'Category already exists' })
+  }
+
+  await categoriesRepository.create({ name, description })
 
   return response.status(201).send()
 })
+
 categoriesRoutes.get('/', async (request, response) => {
   const all = await categoriesRepository.list()
 

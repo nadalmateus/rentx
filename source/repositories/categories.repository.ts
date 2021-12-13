@@ -24,6 +24,13 @@ class CategoriesRepositories {
     const listAllCategories = await clientPrisma.category.findMany()
     return listAllCategories
   }
+
+  async findByName (name: string) {
+    const category = await clientPrisma.category.findFirst({
+      where: { name }
+    })
+    return category
+  }
 }
 
 export { CategoriesRepositories }
