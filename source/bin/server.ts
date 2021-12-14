@@ -1,11 +1,12 @@
 import express from 'express'
 import helmet from 'helmet'
+import compression from 'compression'
 import { routes } from '../routes'
-require('dotenv').config()
 
 const server = express()
 
 server.use(helmet())
+server.use(compression())
 server.use(express.json())
 server.use(routes)
 
