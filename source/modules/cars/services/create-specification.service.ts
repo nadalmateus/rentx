@@ -5,18 +5,17 @@ interface IRequest {
     description: string
 }
 
-class CreateSpecificationService {
-  // eslint-disable-next-line no-useless-constructor
-  constructor (private specificationRepository: SpecificationRepository) { }
+const specificationRepository = new SpecificationRepository()
 
+class CreateSpecificationService {
   async execute ({ name, description }: IRequest) {
-    const specificationAlreadyExists = await this.specificationRepository.findByName(name)
+    const specificationAlreadyExists = await specificationRepository.findByName(name)
 
     if (specificationAlreadyExists) {
       throw new Error('Specification already exists')
     }
 
-    await this.specificationRepository.create({ name, description })
+    await specificationRepository.create({ name, description })
   }
 }
 export { CreateSpecificationService }

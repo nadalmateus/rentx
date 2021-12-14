@@ -8,11 +8,13 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 13,
+        "ecmaVersion": 11,
         "sourceType": "module"
     },
     "plugins": [
         "@typescript-eslint"
     ],
-    "rules": {}
+    "rules": {
+        "no-useless-constructor": "off"
+    }
 }
