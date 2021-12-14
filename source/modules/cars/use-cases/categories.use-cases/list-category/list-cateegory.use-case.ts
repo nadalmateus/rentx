@@ -1,0 +1,5 @@
+class ListCategoryUseCase {
+
+}
+
+export { ListCategoryUseCase }

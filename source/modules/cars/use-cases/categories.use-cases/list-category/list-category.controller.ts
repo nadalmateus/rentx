@@ -1,0 +1,5 @@
+class ListCategoryController {
+
+}
+
+export { ListCategoryController }
