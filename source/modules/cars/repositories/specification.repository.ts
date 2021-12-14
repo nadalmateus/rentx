@@ -1,7 +1,7 @@
+import { randomUUID } from 'crypto'
+import { Specification } from '.prisma/client'
 import { clientPrisma } from '../../../configurations/prisma'
 import { ICreateSpecificationDTO, ISpecificationRepository } from './ispecification.repository'
-import { Specification } from '.prisma/client'
-import { randomUUID } from 'crypto'
 
 class SpecificationRepository implements ISpecificationRepository {
   async findByName (name: string) {
