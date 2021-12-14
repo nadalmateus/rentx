@@ -1,5 +1,5 @@
 import { Category } from '@prisma/client'
-import { CategoriesRepositories } from '../../../repositories/categories.repository'
+import { CategoriesRepositories } from '../../../repositories/implementations/categories.repository'
 
 class ListCategoryUseCase {
   constructor (private categoriesRepository: CategoriesRepositories) { }
