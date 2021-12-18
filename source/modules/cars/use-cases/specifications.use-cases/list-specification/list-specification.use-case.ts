@@ -1,0 +1,5 @@
+class ListSpecificationUseCase {
+
+}
+
+export { ListSpecificationUseCase }
